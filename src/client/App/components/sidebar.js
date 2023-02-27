@@ -1,7 +1,8 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import React from 'react'
+import PropTypes from 'prop-types';
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
@@ -85,6 +86,15 @@ const Sidebar = ({
       </CardContent>
     </StyledCard>
   )
+}
+
+Sidebar.propTypes = {
+  data: PropTypes.shape({
+    artworkUrl600: PropTypes.string,
+    trackName: PropTypes.string,
+    artistName: PropTypes.shape({}),
+    description: PropTypes.string
+  })
 }
 
 export default Sidebar

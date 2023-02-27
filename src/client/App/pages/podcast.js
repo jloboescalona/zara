@@ -54,7 +54,7 @@ const Podcast = () => {
       </Grid>
       <StyledGridDetail item xs={12} md={9}>
         <StyledBox>
-          <b>{`Episodes: ${episodes.length || 0}`}</b>
+          <b>{`Episodes: ${episodes?.length||0}`}</b>
         </StyledBox>
         <EpisodeTable data={episodes} podcastId={podcastId}/>
       </StyledGridDetail>

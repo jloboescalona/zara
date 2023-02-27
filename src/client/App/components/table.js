@@ -2,7 +2,8 @@ import { alpha, styled } from '@mui/material/styles';
 import { parseDate, parseDuration } from 'client/App/utils';
 
 import { Box } from '@mui/system';
-import React from 'react'
+import PropTypes from 'prop-types';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -35,6 +36,11 @@ const EpisodeRow = ({data = {}, podcastId = '', navigate}) => {
     </StyledTableRow>
   )
 }
+EpisodeRow.propTypes = {
+  data: PropTypes.shape({}),
+  podcastId: PropTypes.string,
+  navigate: PropTypes.func
+}
 
 const EpisodeTable = ({data = [], podcastId=''}) => {
   let navigate = useNavigate();
@@ -57,5 +63,10 @@ const EpisodeTable = ({data = [], podcastId=''}) => {
     </Table>
   </StyledTableContainer>
 )}
+
+EpisodeTable.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({})),
+  podcastId: PropTypes.string,
+}
 
 export default EpisodeTable

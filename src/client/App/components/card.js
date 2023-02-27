@@ -1,9 +1,9 @@
-import React from 'react'
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
@@ -66,5 +66,12 @@ const PodCastCard = ({
     </Link>
   )
 }
-
+PodCastCard.propTypes = {
+  data: PropTypes.shape({
+    ['im:artist']: PropTypes.shape({}),
+    ['im:image']: PropTypes.arrayOf(PropTypes.shape({})),
+    ['im:name']: PropTypes.shape({}),
+    id: PropTypes.shape({})
+  })
+}
 export default PodCastCard

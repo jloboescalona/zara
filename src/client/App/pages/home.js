@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import PodCastCard from 'client/App/components/card';
+import PropTypes from 'prop-types';
 import React from 'react'
 import { styled } from '@mui/material/styles';
 import { useGetPodcastsQuery } from 'client/App/api';
@@ -43,6 +44,12 @@ const Rows = ({data = [], filter="", handleChange= ()=>undefined}) => {
       </Grid>
     </>
   )
+}
+
+Rows.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape()),
+  filter: PropTypes.string,
+  handleChange: PropTypes.func
 }
 
 const Home = () => {
