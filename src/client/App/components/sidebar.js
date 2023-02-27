@@ -92,7 +92,7 @@ Sidebar.propTypes = {
   data: PropTypes.shape({
     artworkUrl600: PropTypes.string,
     trackName: PropTypes.string,
-    artistName: PropTypes.shape({}),
+    artistName: PropTypes.oneOfType([PropTypes.shape({}), PropTypes.string]),
     description: PropTypes.string
   })
 }
