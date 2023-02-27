@@ -8,6 +8,7 @@ import {
 import Box from '@mui/material/Box';
 import EpisodeTable from 'client/App/components/table';
 import Grid from '@mui/material/Grid';
+import React from 'react'
 import Sidebar from 'client/App/components/sidebar';
 import { useParams } from 'react-router-dom';
 

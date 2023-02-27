@@ -11,6 +11,7 @@ import Header from 'client/App/components/header';
 import Home from 'client/App/pages/home';
 import PageNotFound from 'client/App/pages/notFound';
 import Podcast from 'client/App/pages/podcast';
+import React from 'react'
 import theme from 'client/App/theme';
 
 const StyledContainer = styled(Container)(({theme}) => ({

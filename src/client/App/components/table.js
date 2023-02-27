@@ -2,6 +2,7 @@ import { alpha, styled } from '@mui/material/styles';
 import { parseDate, parseDuration } from 'client/App/utils';
 
 import { Box } from '@mui/system';
+import React from 'react'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -17,7 +18,7 @@ const StyledTableContainer = styled(TableContainer)(({theme}) => ({
   },
 }))
 
-const StyledTableRow = styled(TableRow)(({theme}) => ({
+const StyledTableRow = styled(TableRow)(() => ({
   '&': {
     cursor: 'pointer'
   },

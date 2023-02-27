@@ -8,10 +8,9 @@ import {
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import React from 'react'
 import Sidebar from 'client/App/components/sidebar';
 import Typography from '@mui/material/Typography';
-import { useGetPostcastByIDQuery } from 'client/App/api';
-import { width } from '@mui/system';
 
 const StyledBox = styled(Box)(({theme}) => ({
   '&': {
